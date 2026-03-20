@@ -345,18 +345,18 @@
 
   function buildRelatedToolOrder(result) {
     if (!result.hasEssentials || result.monthlyContributionEquivalent <= 0) {
-      return ["monthlybudget.simplekit.app", "debt.simplekit.app", "networth.simplekit.app", "investment.simplekit.app", "retirement.simplekit.app"];
+      return ["budget-planner", "debt-payoff-calculator", "net-worth-calculator", "compound-interest-calculator", "retirement-planner"];
     }
 
     if (result.remainingGap <= 0) {
-      return ["networth.simplekit.app", "retirement.simplekit.app", "investment.simplekit.app", "monthlybudget.simplekit.app", "debt.simplekit.app"];
+      return ["net-worth-calculator", "retirement-planner", "compound-interest-calculator", "budget-planner", "debt-payoff-calculator"];
     }
 
     if (result.monthsToTarget > 24 || !Number.isFinite(result.monthsToTarget)) {
-      return ["monthlybudget.simplekit.app", "debt.simplekit.app", "networth.simplekit.app", "investment.simplekit.app", "retirement.simplekit.app"];
+      return ["budget-planner", "debt-payoff-calculator", "net-worth-calculator", "compound-interest-calculator", "retirement-planner"];
     }
 
-    return ["debt.simplekit.app", "investment.simplekit.app", "networth.simplekit.app", "monthlybudget.simplekit.app", "retirement.simplekit.app"];
+    return ["debt-payoff-calculator", "compound-interest-calculator", "net-worth-calculator", "budget-planner", "retirement-planner"];
   }
 
   function normalizeText(value) {
@@ -420,19 +420,19 @@
 
     const toolsLinks = [
       { href: "https://simplekit.app/tools/", label: "All Tools" },
-      { href: "https://retirement.simplekit.app/", label: "Retirement Planner" },
-      { href: "https://fire.simplekit.app/", label: "FIRE Calculator" },
-      { href: "https://cpp.simplekit.app/", label: "CPP Calculator" },
-      { href: "https://rrsptfsa.simplekit.app/", label: "RRSP / TFSA Calculator" },
-      { href: "https://monthlybudget.simplekit.app/", label: "Budget Planner" },
-      { href: "https://debt.simplekit.app/", label: "Debt Payoff Calculator" },
-      { href: "https://networth.simplekit.app/", label: "Net Worth Calculator" },
-      { href: "https://investment.simplekit.app/", label: "Compound Interest Calculator" },
-      { href: "https://rentvsbuy.simplekit.app/", label: "Rent vs Buy Calculator" },
-      { href: "https://mortgage.simplekit.app/", label: "Mortgage Paydown vs Invest" },
-      { href: "https://mortgagecalculator.simplekit.app/", label: "Mortgage Calculator" },
-      { href: "https://fees.simplekit.app/", label: "Investment Fee Calculator" },
-      { href: "https://travel.simplekit.app/", label: "Travel Planner" },
+      { href: "https://simplekit.app/retirement-planner/", label: "Retirement Planner" },
+      { href: "https://simplekit.app/fire-calculator/", label: "FIRE Calculator" },
+      { href: "https://simplekit.app/cpp-calculator/", label: "CPP Calculator" },
+      { href: "https://simplekit.app/rrsp-vs-tfsa-calculator/", label: "RRSP / TFSA Calculator" },
+      { href: "https://simplekit.app/budget-planner/", label: "Budget Planner" },
+      { href: "https://simplekit.app/debt-payoff-calculator/", label: "Debt Payoff Calculator" },
+      { href: "https://simplekit.app/net-worth-calculator/", label: "Net Worth Calculator" },
+      { href: "https://simplekit.app/compound-interest-calculator/", label: "Compound Interest Calculator" },
+      { href: "https://simplekit.app/rent-vs-buy-calculator/", label: "Rent vs Buy Calculator" },
+      { href: "https://simplekit.app/mortgage-paydown-vs-invest-calculator/", label: "Mortgage Paydown vs Invest" },
+      { href: "https://simplekit.app/mortgage-calculator/", label: "Mortgage Calculator" },
+      { href: "https://simplekit.app/investment-fee-calculator/", label: "Investment Fee Calculator" },
+      { href: "https://simplekit.app/travel-planner/", label: "Travel Planner" },
     ];
 
     const toolsSectionMatch = findFooterSection(footerRoot, "Tools");
