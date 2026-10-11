@@ -1,0 +1,30 @@
+/* Expense assumptions and coverage choices retain their recommended fund summary and optional advanced details. */
+.sk-v2[data-v2-calculator="emergency-fund-calculator"] {
+  --fund-accent:var(--v2-teal);
+  --fund-brand:var(--v2-blue);
+  --fund-brand-2:var(--v2-teal);
+  --fund-brand-deep:var(--v2-navy);
+  --fund-ink:var(--v2-navy);
+  --fund-line:var(--v2-border);
+  --fund-line-strong:var(--v2-control-border);
+  --fund-muted:var(--v2-slate);
+  --fund-radius:var(--v2-radius-card);
+  --fund-shadow:var(--v2-shadow-soft);
+  --fund-surface:var(--v2-surface);
+  --fund-surface-soft:var(--v2-surface);
+}
+.sk-v2[data-v2-calculator="emergency-fund-calculator"] .v2c-main { row-gap:1.25rem; }
+.sk-v2[data-v2-calculator="emergency-fund-calculator"] .calculator-layout { gap:1.25rem; }
+.sk-v2[data-v2-calculator="emergency-fund-calculator"] .result-grid { gap:.75rem; }
+.sk-v2[data-v2-calculator="emergency-fund-calculator"] .selection-summary { background:var(--v2-tint); border-color:var(--v2-border); }
+@media(min-width:64rem) {
+ .sk-v2[data-v2-calculator="emergency-fund-calculator"] .calculator-layout { display:grid; grid-template-columns:minmax(0,1.1fr) minmax(18rem,.9fr); align-items:start; }
+}
+@media(max-width:63.99rem) {
+ .sk-v2[data-v2-calculator="emergency-fund-calculator"] .calculator-layout { grid-template-columns:minmax(0,1fr); }
+ .sk-v2[data-v2-calculator="emergency-fund-calculator"] .summary-card-sticky { position:static; }
+}
+@media(max-width:47.99rem) {
+ .sk-v2[data-v2-calculator="emergency-fund-calculator"] :where(.form-grid,.field-grid,.advanced-grid,.input-grid,.salary-grid,.calculator-grid,.group-grid,.hero-grid,.settings-inline-grid) { grid-template-columns:minmax(0,1fr); }
+ .sk-v2[data-v2-calculator="emergency-fund-calculator"] :where(.form-actions,.toolbar-actions,.action-group,.wizard-actions,.backup-actions) { flex-wrap:wrap; }
+}
