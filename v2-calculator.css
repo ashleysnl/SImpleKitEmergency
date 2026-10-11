@@ -28,3 +28,7 @@
  .sk-v2[data-v2-calculator="emergency-fund-calculator"] :where(.form-grid,.field-grid,.advanced-grid,.input-grid,.salary-grid,.calculator-grid,.group-grid,.hero-grid,.settings-inline-grid) { grid-template-columns:minmax(0,1fr); }
  .sk-v2[data-v2-calculator="emergency-fund-calculator"] :where(.form-actions,.toolbar-actions,.action-group,.wizard-actions,.backup-actions) { flex-wrap:wrap; }
 }
+
+/* Final responsive and contrast QA. */
+.sk-v2[data-v2-calculator="emergency-fund-calculator"] .form-field small,.summary-note { color:var(--v2-slate); }
+.sk-v2[data-v2-calculator="emergency-fund-calculator"] .section-kicker { color:var(--v2-blue); }
